@@ -1,0 +1,416 @@
+.content{
+    font-family:  'Microsoft JhengHei';
+    background-color: #F6F4F3;
+    .line{
+        text-align: center;
+        font-size: $size-xl;
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 50px 0 30px;
+        color: #3D1101;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 10%;
+            margin: auto 0;
+            width: $line-a;
+            height: 1px;
+            background-color: rgb(71, 70, 70);
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 10%;
+            margin: auto 0;
+            width: $line-b;
+            height: 1px;
+            background-color: rgb(71, 70, 70);
+        }
+        @include pad(){
+            font-size: $size-l;
+            &:before{
+                width: 110px;
+            }
+            &:after{
+                width: 110px;
+            }
+        }
+        @include iphone (){
+            font-size: $size-xxl;
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+        }
+    }
+    span{
+        display: block;
+    }
+    ul{
+        display: flex;
+        @include iphone(){
+            display: block;
+        }
+    }
+    .list{
+        width: 33.3333%;
+        margin-bottom: 50px;
+        color: #3D1101;
+        @include iphone(){
+            width: 95%;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+        img{
+            display: block;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            @include pad(){
+                width: 160px;
+                height: 160px;
+            }
+            @include iphone(){
+                width: 250px;
+                height: 250px;
+            }
+        }
+        h2{
+            font-size: $size-l;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 600;
+            @include pad(){
+                font-size: 20px;
+            }
+            @include iphone(){
+                font-size: 1.5em;
+                margin: 20px 0;
+            }
+        }
+        p{
+            text-justify:inter-ideograph;
+            font-size: $size-s;
+            padding: 0 10%;
+            font-size: 600;
+            line-height: 1.3;
+            @include iphone(){
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.chef{
+    display: flex;
+    background-color: #3D1101;
+    color: white;
+    font-family:  'Microsoft JhengHei';
+    padding: 0 3%;
+    @include pad(){
+        display: block;
+        padding: 0;
+    }
+    li{
+        width: 50%;
+        @include pad(){
+            width: 100%;
+        }
+        &:nth-child(1){
+            margin: auto 0;
+            @include pad(){
+                max-width: 50%;
+                margin: 0 auto;
+            }
+            @include iphone(){
+                max-width: 100%;
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+                @include pad(){
+                    margin-top: 20px;
+                }
+                @include iphone(){
+                    margin-top: 0;
+                }
+            }
+        }
+        &:nth-child(2){
+            margin: auto 3%;
+            @include pad(){
+                margin: 0;
+                padding: 0 3% 2%;
+            }
+            h2{
+                font-size: $size-xl;
+                margin: 25px 0 10px;
+                @include pad(){
+                    text-align: center;
+                }
+            }
+            p{
+                font-size: $size-m;
+                margin-bottom: 20px;
+                @include pad(){
+                    text-align: center;
+                    padding: 0 10%;
+                }
+                @include iphone(){
+                    text-align: center;
+                    padding: 0 5%;
+                }
+                &:nth-child(3){
+                    font-size: $size-s;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+.comment{
+    font-family:  'Microsoft JhengHei';
+    background-color: rgb(230, 219, 216);
+    .line{
+        text-align: center;
+        font-size: $size-xl;
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 50px 0 30px;
+        color: #3D1101;
+        position: relative;
+        @include pad(){
+            font-size: $size-l;
+        }
+        @include iphone(){
+            font-size: $size-xxl;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 20%;
+            bottom: 0;
+            right: 10%;
+            margin: auto 0;
+            width: $line-a;
+            height: 1px;
+            background-color: rgb(71, 70, 70);
+            @include pad(){
+                width: 110px;
+            }
+            @include iphone(){
+                display: none;
+            }
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 20%;
+            bottom: 0;
+            left: 10%;
+            margin: auto 0;
+            width: $line-b;
+            height: 1px;
+            background-color: rgb(71, 70, 70);
+            @include pad(){
+                width: 110px;
+            }
+            @include iphone(){
+                display: none;
+            }
+        }
+    }
+    ul{
+        display: flex;
+        @include pad(){
+            flex-wrap: wrap;
+        }
+        li{
+            width: 341.333px;
+            padding: 0 10px;
+            @include pad(){
+                width: 50%;
+            }
+            @include iphone(){
+                width: 100%;
+                padding: 0 10px;
+            }
+            .title{
+                display: flex;
+                width: 100%;
+                color: #3D1101;
+                font-weight: 800;
+                img{
+                    max-width: 40%;
+                    border-radius: 50%;
+                    @include iphone(){
+                        max-width:25%;
+                    }
+                }
+                h3{
+                    font-size: 22px;
+                    margin: auto 0;
+                    padding-left: 15px;
+                    letter-spacing: 2px;
+                    @include pad{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    @include pad{
+                        font-size: 16px;
+                    }
+                }
+            }
+            p{
+                padding-left: 38%;
+                font-size: 18px;
+                line-height: 1.5;
+                &:nth-child(3){
+                    margin: 20px 0;
+                    text-align: end;
+                    &::before{
+                        content: '- -';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    font-family:  'Microsoft JhengHei';
+    background-color: #F6F4F3;
+    padding-bottom: 20px;
+    .line{
+        text-align: center;
+        font-size: $size-xl;
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 50px 0 30px;
+        color: #3D1101;
+        position: relative;
+        @include pad(){
+            font-size: $size-l;
+        }
+        @include iphone(){
+            font-size: $size-xxl;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 20%;
+            bottom: 0;
+            right: 10%;
+            margin: auto 0;
+            width: $line-a;
+            height: 1px;
+            background-color: rgb(71, 70, 70);
+            @include pad(){
+                width: 110px;
+            }
+            @include iphone(){
+                display: none;
+            }
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 20%;
+            bottom: 0;
+            left: 10%;
+            margin: auto 0;
+            width: $line-b;
+            height: 1px;
+            background-color: rgb(71, 70, 70);
+            @include pad(){
+                width: 110px;
+            }
+            @include iphone(){
+                display: none;
+            }
+        }
+    }
+    span{
+        display: block;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        @include pad(){
+            display: block;
+        }
+        li{
+            width: 50%;
+            @include pad(){
+                width: 100%
+            }
+        }
+    }
+    img{
+        max-width: 95%;
+        margin-left: 5%;
+        height: 480px;
+        @include pad(){
+            max-width: 95%;
+            margin: 0 2.5% 20px;
+            height: auto;
+        }
+    }
+    .reservation{
+        fieldset{
+            width: 90%;
+            margin: 0 auto !important;
+            line-height: 1.3;
+        }
+        .pure-form label{
+            width: 100%;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3D1101;
+        }
+        .pure-form-message{
+            margin-top: 18px;
+            font-size: 20px;
+            color: #3D1101;
+        }
+        .pure-form{
+            input{
+                width: 100%;
+                font-size: 18px;
+                padding: 10px !important;
+            }
+            .pure-radio{
+                width: 15%;
+                display: inline-block;
+                position: relative;
+            }
+        }
+        input[type="radio"]{
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            vertical-align: -2px;
+        }
+        .btn{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                background-color: #A09E9E;
+            }
+            button:nth-child(2){
+                background-color: #F56C23;
+                margin-left: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/*斷點*/
+@mixin pad{
+    @media (max-width:768px) {
+        @content
+    }
+}
+@mixin iphone{
+    @media (max-width:568px) {
+        @content
+    }
+}
+
+/*圖片替代文字*/
+@mixin hide-text {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*置中*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin position-center {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+

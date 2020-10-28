@@ -1,0 +1,76 @@
+.login{
+    background-color: rgb(230, 219, 216);
+    font-family:  'Microsoft JhengHei';
+    text-align: center;
+    padding: 10px 0;
+    h2{
+        font-size: 3em;
+        color: #3D1101;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+    p{
+        font-size: 1.3em;
+        margin: 20px 0;
+        font-weight: 600;
+        color: #3D1101;
+    }
+    ul{
+        width: 45%;
+        border-top: 3px solid #F56C23;
+        box-shadow: 5px 5px 6px rgb(158, 158, 158);
+        margin: 50px auto;
+        padding: 10px 0;
+        @include pad(){
+            width: 60%;
+        }
+        @include iphone(){
+            width: 80%;
+        }
+        li:nth-child(2){
+            form{
+                width: 100%;
+                text-align: start;
+                padding: 0 5%;
+                position: relative;
+                input{
+                    width: 100%;
+                    margin: 10px 0;
+                    padding: 10px 0 5px 10px;
+                }
+            }
+            #email{
+                background-image: url('https://img.icons8.com/ios-filled/16/000000/new-post.png');
+                background-repeat: no-repeat;
+                background-position-x: 5px;
+                background-position-y: 8px;
+                padding-left: 30px;
+            }
+            #password{
+                background-image: url('https://img.icons8.com/material/16/000000/password--v1.png');
+                background-repeat: no-repeat;
+                background-position-x: 5px;
+                background-position-y: 8px;
+                padding-left: 30px;
+            }
+            .pure-form-message{
+                margin: 10px 0;
+                letter-spacing: 2px;
+                color: coral;
+                font-weight: 900;
+            }
+            .pure-button-primary{
+                width: 49%;
+                background-color: #F56C23;
+                margin-top: 10px;
+            }
+            .btn-registe{
+                background-color: gray;
+                color: white;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}

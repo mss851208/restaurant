@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: #000000b6;
+    font-family:  'Microsoft JhengHei';
+    z-index: 1;
+    h1{
+        background-image: url('../imges/logo_w@svg.svg');
+        background-size: cover;
+        @include hide-text;
+        font-size: $size-xxl;
+        margin-left: 3%;
+        @include pad(){
+            margin: 0 auto;
+        }
+    }
+    .nav{
+        display: flex;
+        height: 100%;
+        @include pad(){
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 56px;
+            opacity: 0;
+        }
+        li{
+            @include pad(){
+                text-align: center;
+                font-size: $size-l;
+                border-top: 1px solid rgb(255, 255, 255);
+                background-color: #000000de;
+            }
+            a{
+                padding: 15px 25px;
+                text-align: center;
+                line-height: 56px;
+                color: white;
+                @include pad(){
+                    display: block;
+                    padding: 0;
+                    letter-spacing: 10px;
+                }
+                &:hover{
+                    border-bottom: 1px solid white;
+                    @include pad(){
+                        border-bottom: none;
+                        background-color: rgb(255, 255, 255);
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .open{
+        display: none;
+        @include pad(){
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: rgb(255, 255, 255);
+            border: 1px solid white;
+            font-size: $size-xl;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    .menu{
+        width: 25px;
+        height: 25px;
+        .bar{
+            display: block;
+            width: 24px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: rgb(255, 255, 255);
+            transition-property: transform;
+            transition-duration: .5s;
+        }
+        .bar:nth-of-type(1){
+            transition:  opacity .5s;
+        }
+    }
+    .openmenu{
+        @include pad(){
+            opacity: 1;
+            transition: .5s;
+        }
+    }
+    .pushed .bar:nth-of-type(1){
+        opacity: 0;
+    }
+    .pushed .bar:nth-of-type(2){
+        transform: translateY(1px)rotate(50deg);
+    
+    }
+    .pushed .bar:nth-of-type(3){
+        transform: translateY(-6.5px)rotate(-50deg);
+    }
+}
+.banner{
+    height: 100%;
+    position: relative;
+    @include pad(){
+        width: 100%;
+    }
+    img{
+        max-width: 100%;
+        @include iphone(){
+            display: none;
+        }
+    }
+    li:nth-child(2){
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.507);
+        color: white;
+        line-height: 1.5;
+        @include pad(){
+            width: 55%;
+            top: 15%;
+            height: 55%;
+        }
+        @include iphone(){
+            width: 90%;
+            height: 70%;
+        }
+    }
+    h2{
+        font-size: 2em;
+        margin: 15px 0;
+        @include pad(){
+            font-size: 1.6em;
+        }
+        @include iphone(){
+            font-size: 2em;
+        }
+    }
+    span{
+        @include iphone(){
+            display: block;
+            text-align: center;
+        }
+    }
+    p{
+        font-size: 1.5em;
+        @include pad(){
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        @include iphone(){
+            font-size: 1em;
+        }
+    }
+    .rwdimg{
+        display: none;
+        @include iphone(){
+            display: block;
+        }
+    }
+}
+.footer{
+    display: flex;
+    background-color: rgb(230, 219, 216);
+    font-family:  'Microsoft JhengHei';
+    @include iphone(){
+        display: block;
+        padding-bottom: 40px;
+    }
+    li{
+        width: 30%;
+        padding: 50px;
+        @include iphone(){
+            width: 100%;
+            text-align: start;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    li:nth-child(1){
+        width: 40%;
+        @include iphone(){
+            width: 100%;
+        }
+    }
+    li:nth-child(2){
+        padding-left: 0;
+        i{
+            display: block;
+            @include iphone(){
+                line-height: 1.5;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+        p{
+            @include pad(){
+                white-space:nowrap;
+            }
+        }
+    }
+    li:nth-child(3){
+        text-align: end;
+        h2{
+            text-align: start;
+            font-size: 2.5em;
+            background-image: url('../imges/logo_l\(null\).svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-indent: 101%;
+            white-space: nowrap;
+            overflow: hidden;
+            @include iphone(){
+                background-image: none;
+                text-indent: 0;
+                text-align: end;
+                font-size: 4em;
+            }
+        }
+        p{
+            font-size: 2em;
+        }
+        i{
+            @include pad(){
+                display: block;
+            }
+            @include iphone(){
+                display: inline-block;
+            }
+        }
+    }
+    h2{
+        font-size: $size-xl;
+        font-weight: 900;
+        color: #3D1101;
+        margin-bottom: 20px;
+        @include iphone(){
+            font-size: 2.5em;
+            padding: 50px 20px 10px;
+        }
+    }
+    p{
+        font-size: $size-s;
+        font-weight: 600;
+        color: #3D1101;
+        line-height: 1.3;
+        @include pad(){
+            font-size: $size-s;
+        }
+        @include iphone(){
+            font-size: $size-m;
+            padding: 0 20px;
+            line-height: 1.2;
+        }
+    }
+}

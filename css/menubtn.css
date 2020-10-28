@@ -1,0 +1,26 @@
+.menu{
+    width: 25px;
+    height: 25px;
+}
+.menu .bar{
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: rgb(255, 255, 255);
+    transition-property: transform;
+    transition-duration: .5s;
+}
+.bar:nth-of-type(1){
+    transition:  opacity .5s;
+}
+.pushed .bar:nth-of-type(1){
+    opacity: 0;
+}
+.pushed .bar:nth-of-type(2){
+    transform: translateY(1px)rotate(50deg);
+
+}
+.pushed .bar:nth-of-type(3){
+    transform: translateY(-6.5px)rotate(-50deg);
+}
